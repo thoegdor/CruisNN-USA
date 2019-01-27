@@ -1,0 +1,4 @@
+.ipynb-checkpoints
+__pycache__
+cap/*
+weights_dir/*
