@@ -12,11 +12,13 @@ skip_frames = 44
 
 --testing
 ruN = "run_54"
-os.execute("mkdir C:\\Users\\unclebret\\Desktop\\deep_learning\\cruising_world_ai\\nEt\\cap\\"..ruN)
 
-local steering_file = io.open("C:\\Users\\unclebret\\Desktop\\deep_learning\\cruising_world_ai\\nEt\\cap\\"..ruN.."\\steering.txt", 'w')
+dir = "" --update
+os.execute("mkdir "..dir..ruN)
 
-local save_state_file = "C:\\Users\\unclebret\\Desktop\\deep_learning\\cruising_world_ai\\BizHawk-1.12.2\\N64\\State\\state_2.State"
+local steering_file = io.open()
+
+local save_state_file = ""
 
 -- start game
 savestate.load(save_state_file)
@@ -31,7 +33,7 @@ while state < end_state do
 	end 
 	
 	-- start cap --
-	client.screenshot("C:\\Users\\unclebret\\Desktop\\deep_learning\\cruising_world_ai\\nEt\\cap\\"..ruN.."\\"..recording_frame..".png")
+	--client.screenshot()
 	  
 	steering_value = joypad.get()["P1 X Axis"]
 	steering_file:write(steering_value .. '\n')

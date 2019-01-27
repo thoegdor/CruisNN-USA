@@ -1,5 +1,6 @@
 function draw_info()
-	gui.drawImage("C:\\Users\\unclebret\\Desktop\\deep_learning\\cruising_world_ai\\nEt\\chris_farley_driving.jpg",100,100,100,100)
+	dir = "" --update
+	gui.drawImage(dir,100,100,100,100)
 	gui.drawEllipse(100,100,50,50)--main circle
 	smaller circle
 end
@@ -22,7 +23,7 @@ SLIDER_WIDTH, SLIDER_HIEGHT = 4, 16
 state = 0
 end_state = 2400000
 
-local save_state_file = "C:\\Users\\unclebret\\Desktop\\deep_learning\\cruising_world_ai\\BizHawk-1.12.2\\N64\\State\\state_2.State"
+local save_state_file = "" --update
 
 -- start game
 savestate.load(save_state_file)
